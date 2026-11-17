@@ -1,4 +1,3 @@
-
 # Gerenciador Logístico
 
 Sistema web desenvolvido para o gerenciamento de operações logísticas, como cadastro de produtos, endereços, transportadoras e controle de fretes.
@@ -39,6 +38,10 @@ gerenciador-logistico/
 │   ├── css/
 │   └── js/
 ├── config/
+│   ├── conexao.example.php
+│   └── conexao.php
+├── database/
+│   └── gerenciador_logistico.sql
 ├── enderecos/
 ├── fretes/
 ├── includes/
@@ -52,13 +55,34 @@ gerenciador-logistico/
 
 ## Como executar o projeto
 
-1. Instale o XAMPP.
-2. Inicie os serviços Apache e MySQL.
-3. Coloque a pasta do projeto dentro do diretório `htdocs`.
-4. Crie o banco de dados `gerenciador_logistico` no MySQL.
-5. Importe a estrutura das tabelas do projeto.
-6. Configure os dados de conexão com o banco no arquivo `config/conexao.php`.
-7. Acesse pelo navegador:
+### 1. Preparar o ambiente
+
+- Instale o [XAMPP](https://www.apachefriends.org/).
+- Inicie os serviços Apache e MySQL.
+- Baixe ou clone este repositório do GitHub.
+- Coloque a pasta do projeto dentro do diretório `htdocs` do XAMPP.
+
+### 2. Configurar o banco de dados
+
+- Acesse o phpMyAdmin pelo XAMPP.
+- Entre na opção **Importar**.
+- Selecione o arquivo `database/gerenciador_logistico.sql`.
+- Execute a importação.
+
+O script criará automaticamente o banco de dados `gerenciador_logistico` e suas cinco tabelas.
+
+### 3. Configurar a conexão
+
+- Acesse a pasta `config`.
+- Utilize o arquivo `conexao.example.php` como modelo.
+- Crie uma cópia com o nome `conexao.php`.
+- Configure os dados de conexão com o MySQL de acordo com seu ambiente local.
+
+**Importante:** o arquivo `conexao.php` contém configurações locais e não deve ser enviado ao GitHub.
+
+### 4. Acessar o sistema
+
+Abra o navegador e acesse:
 
 ```text
 http://localhost/gerenciador-logistico/
@@ -73,6 +97,12 @@ O sistema utiliza MySQL para armazenar informações sobre:
 - Transportadoras.
 - Fretes.
 - Itens vinculados aos fretes.
+
+O banco de dados possui cinco tabelas relacionadas, permitindo associar múltiplos produtos a um mesmo frete.
+
+O script de criação do banco está disponível em:
+
+`database/gerenciador_logistico.sql`
 
 ## Autoria
 

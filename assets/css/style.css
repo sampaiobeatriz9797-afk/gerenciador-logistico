@@ -1,0 +1,717 @@
+
+/* ========================================
+   CONFIGURAÇÕES GERAIS
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F5F7FA;
+    color: #1E293B;
+}
+
+/* ========================================
+   MENU LATERAL
+======================================== */
+
+.menu-lateral {
+    width: 260px;
+    min-height: 100vh;
+    background-color: #172554;
+    padding: 25px 20px;
+    color: white;
+    flex-shrink: 0;
+}
+
+.menu-lateral h2 {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.menu-lateral ul {
+    list-style: none;
+}
+
+.menu-lateral li {
+    margin-bottom: 12px;
+}
+
+.menu-lateral a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 6px;
+    transition: background-color 0.2s;
+}
+
+.menu-lateral a:hover {
+    background-color: #2563EB;
+}
+
+/* ========================================
+   ESTRUTURA PRINCIPAL
+======================================== */
+
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.conteudo-principal {
+    flex: 1;
+    min-width: 0;
+    padding: 32px 25px;
+}
+
+/* ========================================
+   CABEÇALHO
+======================================== */
+
+.cabecalho {
+    background-color: #FFFFFF;
+    min-height: 100px;
+    padding: 24px;
+    border-radius: 8px;
+}
+
+.cabecalho h1 {
+    font-size: 28px;
+    color: #1E293B;
+    margin-bottom: 8px;
+}
+
+.cabecalho p {
+    font-size: 14px;
+    color: #64748B;
+}
+
+/* ========================================
+   INDICADORES DO PAINEL
+======================================== */
+
+.indicadores {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.card-indicador {
+    flex: 1;
+    min-width: 0;
+    min-height: 94px;
+    background-color: #FFFFFF;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.card-indicador p {
+    font-size: 14px;
+    color: #333333;
+    margin-bottom: 18px;
+}
+
+.card-indicador h2 {
+    font-size: 24px;
+    color: #000000;
+}
+
+/* ========================================
+   ÚLTIMOS FRETES
+======================================== */
+
+.ultimos-fretes {
+    background-color: #FFFFFF;
+    margin-top: 25px;
+    padding: 24px;
+    border-radius: 8px;
+}
+
+.ultimos-fretes h3 {
+    font-size: 18px;
+    color: #1E293B;
+    margin-bottom: 20px;
+}
+
+/* ========================================
+   TABELAS GERAIS
+======================================== */
+
+.tabela-fretes table,
+.lista-produtos table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabela-fretes th,
+.lista-produtos th {
+    text-align: left;
+    padding: 14px 12px;
+    font-size: 13px;
+    color: #64748B;
+    background-color: #F1F5F9;
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.tabela-fretes td,
+.lista-produtos td {
+    padding: 14px 12px;
+    font-size: 13px;
+    color: #334155;
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.lista-produtos {
+    background-color: #FFFFFF;
+    margin-top: 25px;
+    padding: 24px;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+.lista-produtos h2 {
+    font-size: 20px;
+    color: #1E293B;
+    margin-bottom: 20px;
+}
+
+.lista-produtos a {
+    color: #2563EB;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.lista-produtos a:hover {
+    text-decoration: underline;
+}
+
+.lista-produtos tr:hover td {
+    background-color: #F8FAFC;
+}
+
+/* Estado vazio */
+.estado-vazio {
+    text-align: center;
+    padding: 35px 0;
+    color: #94A3B8;
+}
+
+.icone-caminhao {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+/* ========================================
+   FORMULÁRIOS
+======================================== */
+
+/* Organização dos campos em duas colunas */
+.linha-campos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+/* Card do formulário */
+.formulario-produto {
+    background-color: #FFFFFF;
+    margin-top: 25px;
+    padding: 24px;
+    border-radius: 8px;
+}
+
+.formulario-produto h2 {
+    font-size: 20px;
+    color: #1E293B;
+    margin-bottom: 24px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #E2E8F0;
+}
+
+/* Campos */
+.campo {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    margin-bottom: 20px;
+}
+
+.campo label {
+    font-size: 14px;
+    color: #334155;
+    margin-bottom: 8px;
+}
+
+/* Inputs, seleções e áreas de texto */
+.campo input,
+.campo textarea,
+.campo select {
+    width: 100%;
+    min-height: 42px;
+    padding: 11px 12px;
+    border: 1px solid #D9D9D9;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: inherit;
+    color: #334155;
+    background-color: #FFFFFF;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.campo textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+.campo input:focus,
+.campo textarea:focus,
+.campo select:focus {
+    border-color: #2563EB;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.10);
+}
+
+/* ========================================
+   PRODUTOS DO FRETE
+======================================== */
+
+#lista-produtos-frete {
+    width: 100%;
+}
+
+.linha-produto-frete {
+    display: grid;
+    grid-template-columns: 2fr 1fr auto;
+    align-items: end;
+    gap: 16px;
+    margin-bottom: 10px;
+}
+
+.linha-produto-frete .campo {
+    margin-bottom: 10px;
+}
+
+.remover-produto {
+    min-height: 42px;
+    padding: 10px 16px;
+    margin-bottom: 30px;
+    border: 1px solid #FCA5A5;
+    border-radius: 6px;
+    background-color: #FEF2F2;
+    color: #B91C1C;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.remover-produto:hover:not(:disabled) {
+    background-color: #FEE2E2;
+}
+
+.remover-produto:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+#adicionar-produto {
+    padding: 10px 16px;
+    margin-bottom: 20px;
+    border: 1px solid #2563EB;
+    border-radius: 6px;
+    background-color: #FFFFFF;
+    color: #2563EB;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#adicionar-produto:hover {
+    background-color: #EFF6FF;
+}
+
+/* ========================================
+   BOTÕES DOS FORMULÁRIOS
+======================================== */
+
+.botoes-formulario {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+.botoes-formulario button {
+    min-height: 42px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #2563EB;
+    color: #FFFFFF;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.botoes-formulario button:hover {
+    background-color: #1D4ED8;
+}
+
+.botoes-formulario button[type="reset"] {
+    background-color: #E2E8F0;
+    color: #334155;
+}
+
+.botoes-formulario button[type="reset"]:hover {
+    background-color: #CBD5E1;
+}
+
+.botoes-formulario a {
+    display: inline-flex;
+    align-items: center;
+    color: #2563EB;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.botoes-formulario a:hover {
+    text-decoration: underline;
+}
+
+/* ========================================
+   NOTIFICAÇÕES DO SISTEMA
+======================================== */
+
+.mensagem {
+    padding: 12px 16px;
+    margin-top: 15px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.mensagem.sucesso {
+    background-color: #DCFCE7;
+    color: #166534;
+    border: 1px solid #86EFAC;
+}
+
+.mensagem.erro {
+    background-color: #FEE2E2;
+    color: #991B1B;
+    border: 1px solid #FCA5A5;
+}
+
+/* ========================================
+   TELA DE RELATÓRIOS
+======================================== */
+
+/* Card do filtro */
+.card-relatorio {
+    background-color: #FFFFFF;
+    margin-top: 22px;
+    padding: 20px 12px;
+    border-radius: 8px;
+}
+
+.card-relatorio h2 {
+    font-size: 18px;
+    color: #1E293B;
+    padding-bottom: 12px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #E2E8F0;
+}
+
+/* Formulário de filtro */
+.card-relatorio form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.campo-data {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin-bottom: 20px;
+}
+
+.campo-data label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 8px;
+}
+
+.campo-data input {
+    width: 100%;
+    height: 36px;
+    padding: 8px;
+    border: 1px solid #D9D9D9;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 13px;
+    color: #334155;
+}
+
+/* Botão gerar relatório */
+.card-relatorio button {
+    align-self: flex-end;
+    min-width: 127px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    background-color: #2563EB;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.card-relatorio button:hover,
+.titulo-resultados button:hover {
+    background-color: #1D4ED8;
+}
+
+/* Card de resultados */
+.card-resultados {
+    background-color: #FFFFFF;
+    margin-top: 22px;
+    min-height: 318px;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+/* Título e botão PDF */
+.titulo-resultados {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.titulo-resultados h2 {
+    font-size: 18px;
+    color: #1E293B;
+}
+
+.titulo-resultados button {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    background-color: #2563EB;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Tabela de relatórios */
+.card-resultados table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+}
+
+.card-resultados thead {
+    background-color: #F1F5F9;
+}
+
+.card-resultados th {
+    padding: 13px 10px;
+    text-align: left;
+    font-size: 11px;
+    font-weight: 600;
+    color: #475569;
+}
+
+.card-resultados th:first-child {
+    border-radius: 6px 0 0 6px;
+}
+
+.card-resultados th:last-child {
+    border-radius: 0 6px 6px 0;
+}
+
+.card-resultados td {
+    padding: 14px 10px;
+    border-bottom: 1px solid #E2E8F0;
+    color: #334155;
+}
+
+.card-resultados td[colspan="6"] {
+    text-align: center;
+    padding: 25px;
+    color: #64748B;
+}
+
+/* ========================================
+   RESPONSIVIDADE
+======================================== */
+
+@media (max-width: 900px) {
+
+    .menu-lateral {
+        width: 210px;
+    }
+
+    .indicadores {
+        flex-wrap: wrap;
+    }
+
+    .card-indicador {
+        flex-basis: 45%;
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .layout {
+        flex-direction: column;
+    }
+
+    .menu-lateral {
+        width: 100%;
+        min-height: auto;
+        padding: 18px;
+    }
+
+    .menu-lateral h2 {
+        margin-bottom: 18px;
+    }
+
+    .menu-lateral ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .menu-lateral li {
+        margin-bottom: 0;
+    }
+
+    .menu-lateral a {
+        padding: 9px;
+        font-size: 13px;
+    }
+
+    .conteudo-principal {
+        padding: 18px 12px;
+    }
+
+    .cabecalho {
+        height: auto;
+    }
+
+    .cabecalho h1 {
+        font-size: 23px;
+    }
+
+    .linha-campos {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .linha-produto-frete {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .remover-produto {
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+
+    .indicadores {
+        flex-direction: column;
+    }
+
+    .card-indicador {
+        flex-basis: auto;
+    }
+
+    .campo-data {
+        width: 100%;
+    }
+
+    .titulo-resultados {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .botoes-formulario {
+        justify-content: flex-start;
+    }
+
+}
+
+/* ========================================
+   IMPRESSÃO DO RELATÓRIO
+======================================== */
+
+@media print {
+
+    body {
+        background: #FFFFFF;
+    }
+
+    .menu-lateral,
+    .cabecalho,
+    .card-relatorio,
+    .titulo-resultados button {
+        display: none !important;
+    }
+
+    .conteudo-principal {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .card-resultados {
+        width: 100%;
+        border: none;
+        box-shadow: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th,
+    td {
+        border: 1px solid #D9D9D9;
+        padding: 10px;
+        text-align: left;
+    }
+
+    th {
+        background: #F2F2F2 !important;
+        color: #1E293B !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+}
+
+/* Item ativo do menu lateral */
+.menu-lateral a.ativo {
+    background-color: #2563EB;
+    color: #FFFFFF;
+}
+
+
